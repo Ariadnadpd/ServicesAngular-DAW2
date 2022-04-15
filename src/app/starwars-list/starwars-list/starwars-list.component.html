@@ -1,0 +1,28 @@
+<mat-card>
+  <form align="center">
+    <mat-form-field >
+        <mat-label>Selecciona un personaje</mat-label>
+        <mat-select matNativeControl [(ngModel)]="selectedName" name="name" (selectionChange)="sendName($event.value)" >
+          <mat-option *ngFor="let item of starwarsList.results " [value]="item.name">
+            {{item.name}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <p *ngIf="selectedName?.length">Has seleccionado a: {{selectedName}}</p>
+  </form>
+</mat-card>
+<br><br>
+
+<mat-card>
+  <div>
+      <h3>
+        Lista de personajes favoritos
+      </h3>
+      <div *ngIf="favoriteNameSelected !== null">
+        <ul>
+          <li *ngFor="let i of favoriteNameSelected">{{i}}</li>
+        </ul>
+      </div>
+
+  </div>
+</mat-card>

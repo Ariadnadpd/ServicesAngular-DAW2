@@ -1,0 +1,21 @@
+<div class="container">
+    <mat-card class="card1">
+      <mat-card-header class="card1header">
+        <h1>SPA de personajes de Star Wars</h1>
+        <mat-icon (click)="openMoreInfo()">info</mat-icon>
+      </mat-card-header>
+       
+      <mat-divider inset></mat-divider>
+      
+      <mat-grid-list cols="2">
+        <mat-grid-tile >
+          <app-starwars-list (nameEvent)="receiveName($event)" [favoriteNameSelected]="favoriteName"></app-starwars-list>
+          
+        </mat-grid-tile>
+        <mat-grid-tile class="grid2">
+          <app-starwars-data [starwarsListSelected]="list" (favoriteNameEvent)="receiveFavoriteName($event)"></app-starwars-data>
+        </mat-grid-tile>
+      </mat-grid-list>
+      
+    </mat-card>
+</div>

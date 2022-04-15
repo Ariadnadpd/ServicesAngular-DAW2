@@ -1,0 +1,51 @@
+
+.container {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-image: url('src/assets/images/fondo5.jpg');
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+h1, mat-icon {
+  color: rgb(245, 240, 235);
+}
+
+.card1 {
+  width: 70%;
+  height: 70%;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 5;
+}
+
+.card1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('src/assets/images/fondo3.jpg') center/120%;
+  background-size: cover;
+  opacity: 0.6;
+}
+
+.card1header{
+  display:inline-flex;
+}
+
+.card1header mat-icon {
+  margin-left: 20px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.grid2 {
+  display: none;
+}
+

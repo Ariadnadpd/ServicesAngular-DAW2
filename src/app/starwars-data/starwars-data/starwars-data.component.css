@@ -1,0 +1,25 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .title {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(73, 67, 67);
+  }
+
+  .data {
+    font-size: small;
+    color: rgb(73, 67, 67);
+  }
+  mat-card {
+    background-color: rgb(245, 240, 235);
+  }
+
+  .cardcenter {
+    text-align: center;
+  }
